@@ -1,0 +1,12 @@
+﻿@model File
+@{
+    ViewData["Title"] = "Download";
+}
+
+<h2>Download</h2>
+
+<form asp-action="Download" enctype="multipart/form-data" method="post">
+
+    <input type="file" asp-for="File">
+    <input type="submit" value="Загрузить"/>
+</form>

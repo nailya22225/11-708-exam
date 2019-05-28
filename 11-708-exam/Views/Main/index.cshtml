@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "index";
+}
+
+<h2>index</h2>
+
+<table>
+    <tr>
+        @foreach (File a in ViewBag.Files)
+        {
+            <td>@a.Description</td>
+            <td><a class="btn btn-default" asp-action="File" asp-route-file="@a.Id">@a.Url</a></td>
+        }
+    </tr>
+</table>
